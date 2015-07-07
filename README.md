@@ -2,7 +2,7 @@ badawy/embedly
 ================
 [![Latest Stable Version](https://poser.pugx.org/badawy/embedly/v/stable)](https://packagist.org/packages/badawy/embedly) [![Total Downloads](https://poser.pugx.org/badawy/embedly/downloads)](https://packagist.org/packages/badawy/embedly) [![Latest Unstable Version](https://poser.pugx.org/badawy/embedly/v/unstable)](https://packagist.org/packages/badawy/embedly) [![License](https://poser.pugx.org/badawy/embedly/license)](https://packagist.org/packages/badawy/embedly)
 
-Custom PHP Embedly Package for the Laravel 5 framework - developed by [Ahmad Elbadawy](https://github.com/elbadawy).
+Custom PHP Embedly Package for the Laravel 5.* framework - developed by [Ahmad Elbadawy](https://github.com/elbadawy).
 
 
 
@@ -46,8 +46,6 @@ Custom PHP Embedly Package for the Laravel 5 framework - developed by [Ahmad Elb
 
 ```
 
-```
-
 4) Copy the package config to your local config with the publish command:
 
 ```php
@@ -64,6 +62,11 @@ Custom PHP Embedly Package for the Laravel 5 framework - developed by [Ahmad Elb
 
 Comming Soon!
 
+
+
+## ToDo
+
+*Add 'Display' APIs
 
 
 
