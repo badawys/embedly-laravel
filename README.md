@@ -1,7 +1,7 @@
 badawy/embedly
 ================
 
-Custom PHP Embedly library for the Laravel 5 framework - developed by [Ahmad Elbadawy](https://github.com/elbadawy).
+Custom PHP Embedly Package for the Laravel 5 framework - developed by [Ahmad Elbadawy](https://github.com/elbadawy).
 
 
 
@@ -51,7 +51,7 @@ Add the facade to your `config/app.php` file:
 
 
 
-That's all there is to it! Have fun!
+Comming Soon!
 
 
 
