@@ -1,0 +1,24 @@
+{
+    "name": "badawy/embedly",
+    "description": "A Laravel 5 package for the Embedly api",
+    "license": "MIT",
+    "authors": [
+      {
+        "name": "Ahmad Elbadawy",
+        "email": "ahmad.elbadawy@outlook.com"
+      }
+    ],
+
+
+    "require": {
+        "ixudra/curl": "5.*",
+        "php": ">=5.4.0",
+        "illuminate/support": "~5.0.17|5.1.*"
+    },
+    "autoload": {
+      "psr-4": {
+        "Badawy\\Embedly\\": "src/"
+      }
+    },
+    "minimum-stability": "dev"
+}
