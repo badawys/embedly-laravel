@@ -20,29 +20,19 @@ Custom PHP Embedly Package for the Laravel 5.* framework - developed by [Ahmad E
 
 ```
 
-2) Add the service provider to your `config/app.php` file:
+2) Add the service provider to the providers array in your `config/app.php` file:
 
 ```php
 
-    providers   => array(
-
-        //...
         'Badawy\Embedly\EmbedlyServiceProvider',
-
-    ),
 
 ```
 
-3) Add the facade to your `config/app.php` file:
+3) Add the facade to the aliases array in your `config/app.php` file:
 
 ```php
 
-    facades     => array(
-
-        //...
-        'Embedly'          => 'Badawy\Embedly\Facades\Embedly',
-
-    ),
+        'Embedly' => 'Badawy\Embedly\Facades\Embedly',
 
 ```
 
@@ -66,7 +56,7 @@ Comming Soon!
 
 ## ToDo
 
-*Add 'Display' APIs
+- Add 'Display' APIs
 
 
 
