@@ -2,7 +2,7 @@ badawy/embedly
 ================
 [![Latest Stable Version](https://poser.pugx.org/badawy/embedly/v/stable)](https://packagist.org/packages/badawy/embedly) [![Total Downloads](https://poser.pugx.org/badawy/embedly/downloads)](https://packagist.org/packages/badawy/embedly) [![Latest Unstable Version](https://poser.pugx.org/badawy/embedly/v/unstable)](https://packagist.org/packages/badawy/embedly) [![License](https://poser.pugx.org/badawy/embedly/license)](https://packagist.org/packages/badawy/embedly)
 
-Custom PHP Embedly Package for the Laravel 5.* framework - developed by [Ahmad Elbadawy](https://github.com/elbadawy).
+Custom Embedly Package for the Laravel 5.*  - by [Ahmad Elbadawy](https://github.com/elbadawy).
 
 
 
@@ -35,7 +35,7 @@ Custom PHP Embedly Package for the Laravel 5.* framework - developed by [Ahmad E
 4) Copy the package config to your local config with the publish command:
 
 ```php
-    php artisan vendor:publish
+        php artisan vendor:publish
 ```
 
 
@@ -63,6 +63,6 @@ This template is open-sourced software licensed under the [MIT license](http://o
 
 ## Contact
 
-Ahmad Elbadawy (developer)
+Ahmad Elbadawy
 
 - Email: ahmad.elbadawy@outlook.com
