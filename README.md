@@ -51,7 +51,7 @@ Comming Soon!
 ## ToDo
 
 - Add 'Display' APIs
-
+- Error codes handling
 
 
 ## License
