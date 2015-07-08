@@ -52,6 +52,7 @@ Comming Soon!
 
 - Add 'Display' APIs
 - Error codes handling
+- Code comments and package documentation
 
 
 ## License
