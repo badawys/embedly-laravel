@@ -1,9 +1,8 @@
 <?php namespace Badawy\Embedly;
 
-use Ixudra\Curl\Facades\Curl;
+use \Curl\Curl;
 
 class Embedly {
-
 
     /**
      * @var
@@ -21,12 +20,19 @@ class Embedly {
     protected $types;
 
     /**
+     * @var Curl
+     */
+    protected $curl;
+
+    /**
      * constructor
      */
     function __construct()
     {
-        $this->key = config('embedly.key');
-        $this->api_url = 'http://api.embed.ly/1/';
+        $this->curl = new Curl(); //Curl instance
+        $this->key = config('embedly.key'); //Api key
+        $this->api_url = 'http://api.embed.ly/1/'; //Api request base url
+        //Embedly APIs types
         $this->types = [
             '1' => 'extract',
             '2' => 'oembed',
@@ -39,7 +45,7 @@ class Embedly {
      * @param array $parms
      * @return mixed
      */
-    public function extract ($url, Array $parms) {
+    public function extract ($url, Array $parms = null) {
 
         if (!is_array($url)) {
             $url = [$url];
@@ -53,7 +59,7 @@ class Embedly {
      * @param array $parms
      * @return mixed
      */
-    public function oembed ($url, Array $parms) {
+    public function oembed ($url, Array $parms = null) {
 
         if (!is_array($url)) {
             $url = [$url];
@@ -69,7 +75,9 @@ class Embedly {
      * @param $type
      * @return mixed
      */
-    protected function request (Array $url, Array $args, $type) {
+    protected function request (Array $url, Array $args = null, $type) {
+
+        $parms ['key'] = $this->key;
 
         if (count($url) > 1){
             foreach ($url as $key => $value){
@@ -77,22 +85,28 @@ class Embedly {
             }
             $parms ['urls'] = implode(',', $url);
         } else {
-            $parms ['url'] = $url[0];
+            $parms ['url'] = urlencode($url[0]);
         }
-        $parms ['key'] = $this->key;
 
-        if(!empty($args))
+        if($args)
             $parms ['args'] = http_build_query($args);
 
-        $q = $this->api_url . $this->types[$type] . '?key=' . $parms['key'] . '&' . $parms['args'];
+        //make the request url string
+        $q = $this->api_url . $this->types[$type] . '?key=' . $parms['key'];
 
+        //add embedly query arguments to request url
+        if (isset($parms['args']))
+            $q .= '&'.$parms['args'];
+
+        //add the url (or the urls) to request url
         if (count($url) > 1){
             $q .= '&urls='.$parms['urls'];
         } else {
             $q .= '&url='.$parms['url'];
         }
 
-        $response = json_decode(Curl::get($q));
+        //send the request and get the respond
+        $response = $this->curl->get($q);
 
         return $response;
     }

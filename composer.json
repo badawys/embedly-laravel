@@ -11,7 +11,7 @@
 
 
     "require": {
-        "ixudra/curl": "5.*",
+        "php-curl-class/php-curl-class": "3.*",
         "php": ">=5.4.0",
         "illuminate/support": "~5.0.17|5.1.*"
     },
