@@ -2,7 +2,7 @@ badawy/embedly
 ================
 [![Latest Stable Version](https://poser.pugx.org/badawy/embedly/v/stable)](https://packagist.org/packages/badawy/embedly) [![Total Downloads](https://poser.pugx.org/badawy/embedly/downloads)](https://packagist.org/packages/badawy/embedly) [![Latest Unstable Version](https://poser.pugx.org/badawy/embedly/v/unstable)](https://packagist.org/packages/badawy/embedly) [![License](https://poser.pugx.org/badawy/embedly/license)](https://packagist.org/packages/badawy/embedly)
 
-Custom Embedly Package for the Laravel 5.*  - by [Ahmad Elbadawy](https://github.com/elbadawy).
+Custom Embedly Package for the Laravel 5.*
 
 
 
@@ -38,6 +38,11 @@ Custom Embedly Package for the Laravel 5.*  - by [Ahmad Elbadawy](https://github
         php artisan vendor:publish
 ```
 
+5) Add your api key in `config/embedly.php` file:
+
+```php
+        'key' => 'xxxxxxxxxxxxxxxxxx'
+```
 
 
 ## Usage
