@@ -2,6 +2,10 @@
     "name": "badawy/embedly",
     "description": "A Laravel 5.* package for the Embedly api",
     "license": "MIT",
+    "keywords": [
+        "php", "laravel", "class", "api", "package", "framework", "embedly",
+        "elbadawy", "badawy"
+    ],
 
     "authors": [
       {
