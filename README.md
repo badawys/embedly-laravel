@@ -23,13 +23,13 @@ Custom Embedly Package for the Laravel 5.*
 2) Add the service provider to the providers array in your `config/app.php` file:
 
 ```php
-        'Badawy\Embedly\EmbedlyServiceProvider',
+        Badawy\Embedly\EmbedlyServiceProvider
 ```
 
-3) Add the facade to the aliases array in your `config/app.php` file:
+3) Add the facade to your `config/app.php` file:
 
 ```php
-        'Embedly' => 'Badawy\Embedly\Facades\Embedly',
+        Embedly' => 'Badawy\Embedly\Facades\Embedly
 ```
 
 4) Copy the package config to your local config with the publish command:
@@ -47,17 +47,67 @@ Custom Embedly Package for the Laravel 5.*
 
 ## Usage
 
+You can extract or embed single URL or multiple URLs by pass them into an Array instead of String,
+
+You can also pass an Array of your query arguments as second argument in both Extract and Embed (see examples)
+
+[See Embedly documentation for more information about results, errors and query arguments] (http://embed.ly/docs)
 
 
-Comming Soon!
+
+## Examples
 
 
+1) Embedly Extract
+
+
+```php
+     $q = Embedly::extract('http://techcrunch.com/2013/03/26/embedly-now-goes-beyond-embedding-with-new-products-extract-display-for-making-sense-of-links-resizing-images/'
+           'maxwidth' => '500'
+       ]);
+```
+
+```php
+     $q = Embedly::extract([
+            'http://techcrunch.com/2013/03/26/embedly-now-goes-beyond-embedding-with-new-products-extract-display-for-making-sense-of-links-resizing-images/',
+            'http://deadspin.com/5690535/the-bottom-100-the-worst-players-in-nfl-history-part-1',
+            'http://blog.embed.ly/31814817'],[
+                'maxwidth' => '500'
+       ]);
+```
+
+
+2) Embedly Embed
+
+
+```php
+     $q = Embedly::oembed('http://vimeo.com/18150336',[
+           'maxwidth' => '500'
+       ]);
+```
+
+```php
+     $q = Embedly::oembed([
+            'https://www.youtube.com/watch?v=jofNR_WkoCE',
+            'http://soundcloud.com/whichlight/how-to-pronounce-my-name',
+            'http://vimeo.com/18150336'],[
+                'maxwidth' => '500'
+       ]);
+```
+
+Then you can access results :
+
+```php
+    if(!$q->error){
+       echo $q->error_message; //Error
+    } else {
+       echo $q->title; //Get result
+    }
+```
 
 ## ToDo
 
 - Add 'Display' APIs
-- Error codes handling
-- Code comments and package documentation
 
 
 ## License

@@ -24,12 +24,14 @@ class Embedly {
      */
     protected $curl;
 
+
     /**
      * constructor
      */
     function __construct()
     {
         $this->curl = new Curl(); //Curl instance
+
         $this->key = config('embedly.key'); //Api key
         $this->api_url = 'http://api.embed.ly/1/'; //Api request base url
         //Embedly APIs types
@@ -105,10 +107,28 @@ class Embedly {
             $q .= '&url='.$parms['url'];
         }
 
-        //send the request and get the respond
-        $response = $this->curl->get($q);
 
+        //send the request and return the respond
+
+        $this->curl->get($q); //send get request
+
+        $response = json_decode($this->curl->raw_response, true); //decode json to array to add 'error' attribute
+
+        /* NOTE: adding the error attribute to the response is to make
+         *       it easy to check for errors.
+         */
+
+        //add 'error' attribute to array
+        if ($this->curl->error) {
+            $response['error'] = true ;
+        } else {
+            $response['error'] = false ;
+        }
+
+        //decode array into stdClass object
+        $response = json_decode(json_encode($response));
+
+        //return response object
         return $response;
     }
-
 }
