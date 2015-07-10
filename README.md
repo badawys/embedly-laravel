@@ -98,7 +98,7 @@ You can also pass an Array of your query arguments as second argument in both Ex
 Then you can access results :
 
 ```php
-    if(!$q->error){
+    if($q->error){
        echo $q->error_message; //Error
     } else {
        echo $q->title; //Get result
