@@ -2,7 +2,6 @@
     "name": "badawy/embedly",
     "description": "A Laravel 5.* package for the Embedly api",
     "license": "MIT",
-    "version": "1.0.0",
 
     "authors": [
       {
