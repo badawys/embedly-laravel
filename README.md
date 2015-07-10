@@ -14,7 +14,7 @@ Custom Embedly Package for the Laravel 5.*
 
     {
         "require": {
-            "badawy/embedly": "dev-master"
+            "badawy/embedly": "1.*"
         }
     }
 
