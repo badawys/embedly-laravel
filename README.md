@@ -29,7 +29,7 @@ Custom Embedly Package for the Laravel 5.*
 3) Add the facade to your `config/app.php` file:
 
 ```php
-        Embedly' => 'Badawy\Embedly\Facades\Embedly
+        'Embedly' => Badawy\Embedly\Facades\Embedly
 ```
 
 4) Copy the package config to your local config with the publish command:
