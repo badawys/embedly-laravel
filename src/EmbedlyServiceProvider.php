@@ -23,7 +23,7 @@ class EmbedlyServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/config/embedly.php' => config_path('embedly.php'),
+            __DIR__.'/config/Embedly.php' => config_path('embedly.php'),
         ]);
     }
 
@@ -34,7 +34,7 @@ class EmbedlyServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/config/embedly.php', 'embedly');
+        $this->mergeConfigFrom(__DIR__.'/config/Embedly.php', 'embedly');
 
         $this->app['Embedly'] = $this->app->share(
             function($app)
