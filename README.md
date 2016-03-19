@@ -62,7 +62,7 @@ You can also pass an Array of your query arguments as second argument in both Ex
 
 
 ```php
-     $q = Embedly::extract('http://techcrunch.com/2013/03/26/embedly-now-goes-beyond-embedding-with-new-products-extract-display-for-making-sense-of-links-resizing-images/'
+     $q = Embedly::extract('http://techcrunch.com/2013/03/26/embedly-now-goes-beyond-embedding-with-new-products-extract-display-for-making-sense-of-links-resizing-images/', [
            'maxwidth' => '500'
        ]);
 ```
