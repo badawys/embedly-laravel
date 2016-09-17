@@ -38,10 +38,10 @@ Custom Embedly Package for the Laravel 5.*
         art vendor:publish --provider="Badawy\Embedly\EmbedlyServiceProvider"
 ```
 
-5) Add your api key in `config/embedly.php` file:
+5) Add your api key in your `.env` file:
 
-```php
-        'key' => 'xxxxxxxxxxxxxxxxxx'
+```
+        EMBEDLY_API_KEY=xxxxxxxxxxxxxxxxxx
 ```
 
 

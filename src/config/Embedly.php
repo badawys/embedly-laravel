@@ -5,6 +5,6 @@ return array(
     /**
      * Embedly api key
      */
-   'key' => 'key-here'
+   'key' => env('EMBEDLY_API_KEY'),
 
 );
