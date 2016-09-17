@@ -35,7 +35,7 @@ Custom Embedly Package for the Laravel 5.*
 4) Copy the package config to your local config with the publish command:
 
 ```php
-        art vendor:publish --provider="Badawy\Embedly\EmbedlyServiceProvider"
+        php artisan vendor:publish --provider="Badawy\Embedly\EmbedlyServiceProvider"
 ```
 
 5) Add your api key in your `.env` file:
