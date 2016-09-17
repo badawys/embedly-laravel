@@ -23,19 +23,19 @@ Custom Embedly Package for the Laravel 5.*
 2) Add the service provider to the providers array in your `config/app.php` file:
 
 ```php
-        Badawy\Embedly\EmbedlyServiceProvider
+        Badawy\Embedly\EmbedlyServiceProvider::class,
 ```
 
 3) Add the facade to your `config/app.php` file:
 
 ```php
-        'Embedly' => Badawy\Embedly\Facades\Embedly
+        'Embedly' => Badawy\Embedly\Facades\Embedly::class,
 ```
 
 4) Copy the package config to your local config with the publish command:
 
 ```php
-        php artisan vendor:publish
+        art vendor:publish --provider="Badawy\Embedly\EmbedlyServiceProvider"
 ```
 
 5) Add your api key in `config/embedly.php` file:
