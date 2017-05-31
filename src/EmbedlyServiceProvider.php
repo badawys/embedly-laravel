@@ -36,11 +36,8 @@ class EmbedlyServiceProvider extends ServiceProvider
     {
         $this->mergeConfigFrom(__DIR__.'/config/Embedly.php', 'embedly');
 
-        $this->app['Embedly'] = $this->app->share(
-            function($app)
-            {
-                return new Embedly();
-            }
-        );
+        $this->app->singleton('Embedly', function(){
+            return new Embedly();
+        });
     }
 }
