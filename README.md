@@ -8,7 +8,19 @@ Custom Embedly Package for the Laravel 5.*
 
 ## Installation
 
-1) Pull this package in through Composer.
+1) Pull this package in through Composer. (Laravel 5.4)
+
+```js
+
+    {
+        "require": {
+            "badawy/embedly": "2.*"
+        }
+    }
+
+```
+
+### if you are using Laravel 5.3 or earlier you should use v1.*
 
 ```js
 
@@ -19,6 +31,7 @@ Custom Embedly Package for the Laravel 5.*
     }
 
 ```
+
 
 2) Add the service provider to the providers array in your `config/app.php` file:
 
